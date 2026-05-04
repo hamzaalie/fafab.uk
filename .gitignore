@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.vercel
+
+# PocketBase runtime (keep pb_migrations; exclude local DB + binary)
+apps/pocketbase/pb_data/
+apps/pocketbase/pocketbase
