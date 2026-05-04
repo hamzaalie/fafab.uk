@@ -10,13 +10,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="font-bold text-xl mb-4">
-              <span className="text-accent">FAFAB</span> Integrated Facilities Ltd
+              <span className="text-accent">FAFAB</span>
             </h3>
             <p className="text-sm text-primary-foreground/80 mb-4">
               Professional staffing, security, cleaning, and facilities management services across the UK.
-            </p>
-            <p className="text-sm text-primary-foreground/80">
-              Company No: 17166678
             </p>
           </div>
 
@@ -82,7 +79,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-sm text-primary-foreground/80">
-            © {new Date().getFullYear()} FAFAB Integrated Facilities Ltd. All rights reserved.
+            © {new Date().getFullYear()} FAFAB. All rights reserved.
           </p>
         </div>
       </div>

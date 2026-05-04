@@ -61,7 +61,7 @@ const HomePage = () => {
                   Comprehensive Building Facility Management
                 </h1>
                 <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
-                  Fast workforce solutions within 24–48 hours
+                  Fast workforce solutions within 24 hours
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8">
@@ -104,7 +104,7 @@ const HomePage = () => {
 
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
                 <motion.div initial={{
                 opacity: 0,
                 y: 20
@@ -139,22 +139,6 @@ const HomePage = () => {
                   </p>
                 </motion.div>
 
-                <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.5,
-                delay: 0.3
-              }}>
-                  <Building2 className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-2">Company No: 17166678</h3>
-                  <p className="text-muted-foreground">
-                    Registered and trusted UK company
-                  </p>
-                </motion.div>
               </div>
             </div>
           </section>

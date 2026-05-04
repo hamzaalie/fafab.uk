@@ -30,7 +30,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
             <div className="font-bold text-xl">
-              <span className="text-accent">FAFAB</span> Integrated Facilities
+              <span className="text-accent">FAFAB</span>
             </div>
           </Link>
 
