@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Users, Shield, Building2, Clock, CheckCircle2 } from 'lucide-react';
+import { Users, Shield, Sparkles, Building2, Clock, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
@@ -10,9 +10,15 @@ import ServiceCard from '@/components/ServiceCard.jsx';
 import WhatsAppButton from '@/components/WhatsAppButton.jsx';
 const HomePage = () => {
   const services = [{
+    icon: Building2,
+    title: 'Facilities management',
+    description: 'Complete building support and maintenance',
+    benefits: ['Building maintenance', 'Vendor management', 'Compliance support', 'Cost optimization'],
+    link: '/services/facilities'
+  }, {
     icon: Users,
     title: 'Staffing solutions',
-    description: 'Fast workforce solutions within 2 to 24 hours',
+    description: 'Fast deployment of qualified staff within 2 to 24 hours',
     benefits: ['Temporary and permanent placements', 'Pre-vetted professionals', 'Industry-specific expertise', 'Flexible contracts'],
     link: '/services/staffing'
   }, {
@@ -22,11 +28,11 @@ const HomePage = () => {
     benefits: ['SIA licensed guards', 'Site and event security', 'CCTV monitoring', '24/7 availability'],
     link: '/services/security'
   }, {
-    icon: Building2,
-    title: 'Facilities management',
-    description: 'Complete building support and maintenance',
-    benefits: ['Building maintenance', 'Vendor management', 'Compliance support', 'Cost optimization'],
-    link: '/services/facilities'
+    icon: Sparkles,
+    title: 'Cleaning services',
+    description: 'Office and industrial cleaning solutions',
+    benefits: ['Daily office cleaning', 'Deep cleaning services', 'Industrial facilities', 'Eco-friendly products'],
+    link: '/services/cleaning'
   }];
   return <>
       <Helmet>
@@ -90,7 +96,7 @@ const HomePage = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {services.map((service, index) => <ServiceCard key={index} {...service} index={index} />)}
               </div>
             </div>
