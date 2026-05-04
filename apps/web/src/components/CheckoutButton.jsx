@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import apiServerClient from '@/lib/apiServerClient';
 
-const CheckoutButton = ({ courseId, courseName, price }) => {
+const CheckoutButton = ({ courseName, price, label = 'Enroll now' }) => {
   const [loading, setLoading] = useState(false);
 
   const handleCheckout = async () => {
@@ -39,9 +39,9 @@ const CheckoutButton = ({ courseId, courseName, price }) => {
     <Button 
       onClick={handleCheckout} 
       disabled={loading}
-      className="w-full bg-accent hover:bg-accent/90 text-white"
+      className="w-full bg-accent hover:bg-accent/90 text-white font-semibold"
     >
-      {loading ? 'Processing...' : 'Enroll now'}
+      {loading ? 'Processing...' : label}
     </Button>
   );
 };

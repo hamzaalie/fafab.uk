@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import CheckoutButton from '@/components/CheckoutButton.jsx';
 import { motion } from 'framer-motion';
 
-const CourseCard = ({ courseId, courseName, price, description, features, index = 0 }) => {
+const CourseCard = ({ courseId, courseName, price, description, features, index = 0, buttonLabel = 'Enroll now' }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ const CourseCard = ({ courseId, courseName, price, description, features, index 
           )}
         </CardContent>
         <CardFooter className="mt-auto">
-          <CheckoutButton courseId={courseId} courseName={courseName} price={price} />
+          <CheckoutButton courseName={courseName} price={price} label={buttonLabel} />
         </CardFooter>
       </Card>
     </motion.div>

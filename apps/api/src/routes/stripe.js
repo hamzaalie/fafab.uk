@@ -13,18 +13,23 @@ router.post('/create-checkout', async (req, res) => {
     return res.status(400).json({ error: 'Missing required fields: amount, productName, successUrl, cancelUrl' });
   }
 
-  logger.info(`Creating checkout session for ${productName} - $${amount}`);
+  const unitAmountPence = Math.round(Number(amount));
+  if (!Number.isFinite(unitAmountPence) || unitAmountPence < 1) {
+    return res.status(400).json({ error: 'Invalid amount' });
+  }
+
+  logger.info(`Creating checkout session for ${productName} - ${unitAmountPence} minor units`);
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [
       {
         price_data: {
-          currency: 'usd',
+          currency: 'gbp',
           product_data: {
             name: productName,
           },
-          unit_amount: Math.round(amount * 100),
+          unit_amount: unitAmountPence,
         },
         quantity: 1,
       },

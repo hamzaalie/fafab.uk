@@ -36,6 +36,21 @@ const TrainingPage = () => {
         'Emergency response procedures',
         'Certificate upon completion'
       ]
+    },
+    {
+      courseId: 'cleaning-training',
+      courseName: 'Cleaning Training Course',
+      price: 300,
+      description:
+        'Learn professional cleaning skills for offices, commercial buildings, and residential properties in the UK.',
+      features: [
+        'Basic cleaning techniques',
+        'Health & safety rules',
+        'Equipment and chemicals use',
+        'Workplace standards (UK)',
+        'How to get cleaning jobs fast'
+      ],
+      buttonLabel: 'Pay Now with Card'
     }
   ];
 
@@ -43,7 +58,7 @@ const TrainingPage = () => {
     <>
       <Helmet>
         <title>Training courses - FAFAB Integrated Facilities</title>
-        <meta name="description" content="Professional training courses including recruitment training and security training. Free job guide and paid certification courses." />
+        <meta name="description" content="Professional training courses including recruitment, security, and cleaning training. Free job guide and paid certification courses." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -141,7 +156,7 @@ const TrainingPage = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 {courses.map((course, index) => (
                   <CourseCard key={course.courseId} {...course} index={index} />
                 ))}

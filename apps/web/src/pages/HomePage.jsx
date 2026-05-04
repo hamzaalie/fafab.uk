@@ -67,7 +67,12 @@ const HomePage = () => {
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8">
                     <Link to="/contact">Request staff</Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8">
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-primary-foreground bg-transparent text-primary-foreground shadow-none hover:bg-primary-foreground hover:text-primary text-lg px-8"
+                  >
                     <Link to="/services/staffing">View services</Link>
                   </Button>
                 </div>
