@@ -24,7 +24,7 @@ const StaffingPage = () => {
     <>
       <Helmet>
         <title>Staffing solutions - FAFAB Integrated Facilities</title>
-        <meta name="description" content="Fast deployment of qualified staff within 24-48 hours. Temporary and permanent placements across all industries." />
+        <meta name="description" content="Fast deployment of qualified staff within 2 to 24 hours. Temporary and permanent placements across all industries." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -42,7 +42,7 @@ const StaffingPage = () => {
                   Staffing solutions
                 </h1>
                 <p className="text-xl text-primary-foreground/90 max-w-3xl">
-                  Fast deployment of qualified staff within 24-48 hours for your business needs
+                  Fast deployment of qualified staff within 2 to 24 hours for your business needs
                 </p>
               </motion.div>
             </div>
@@ -58,7 +58,7 @@ const StaffingPage = () => {
                 >
                   <h2 className="text-3xl font-bold mb-6">Quick deployment, quality guaranteed</h2>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    We understand that staffing needs can arise urgently. Our extensive network of pre-vetted professionals allows us to deploy qualified staff to your location within 24-48 hours.
+                    We understand that staffing needs can arise urgently. Our extensive network of pre-vetted professionals allows us to deploy qualified staff to your location within 2 to 24 hours.
                   </p>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                     Whether you need temporary cover, permanent placements, or specialized expertise, we provide flexible solutions tailored to your industry and requirements.
@@ -66,7 +66,7 @@ const StaffingPage = () => {
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-accent" />
-                      <span className="font-medium">24-48 hour deployment</span>
+                      <span className="font-medium">2 to 24 hour deployment</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Users className="w-5 h-5 text-accent" />
@@ -159,7 +159,7 @@ const StaffingPage = () => {
               >
                 <h2 className="text-3xl font-bold mb-6">Need staff urgently?</h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Get in touch today and we'll have qualified professionals ready within 24-48 hours
+                  Get in touch today and we'll have qualified professionals ready within 2 to 24 hours
                 </p>
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                   <Link to="/contact">Request staff</Link>

@@ -12,7 +12,7 @@ const HomePage = () => {
   const services = [{
     icon: Users,
     title: 'Staffing solutions',
-    description: 'Fast deployment of qualified staff within 24-48 hours',
+    description: 'Fast deployment of qualified staff within 2 to 24 hours',
     benefits: ['Temporary and permanent placements', 'Pre-vetted professionals', 'Industry-specific expertise', 'Flexible contracts'],
     link: '/services/staffing'
   }, {
@@ -37,7 +37,7 @@ const HomePage = () => {
   return <>
       <Helmet>
         <title>FAFAB Integrated Facilities - Staffing, Security & Cleaning Services UK</title>
-        <meta name="description" content="Fast workforce solutions within 24-48 hours. Professional staffing, security, cleaning, and facilities management services across the UK." />
+        <meta name="description" content="Fast workforce solutions within 2 to 24 hours. Professional staffing, security, cleaning, and facilities management services across the UK." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -61,7 +61,7 @@ const HomePage = () => {
                   Comprehensive Building Facility Management
                 </h1>
                 <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
-                  Fast workforce solutions within 24 hours
+                  Fast workforce solutions within 2 to 24 hours
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8">
@@ -116,7 +116,7 @@ const HomePage = () => {
                 delay: 0.1
               }}>
                   <Clock className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-2">24-48 hour deployment</h3>
+                  <h3 className="text-2xl font-bold mb-2">2 to 24 hour deployment</h3>
                   <p className="text-muted-foreground">
                     Rapid response to your staffing needs
                   </p>
