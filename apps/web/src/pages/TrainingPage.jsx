@@ -14,7 +14,7 @@ const TrainingPage = () => {
     {
       courseId: 'recruitment-training',
       courseName: 'Recruitment training',
-      price: 99,
+      price: 250,
       description: 'Learn professional recruitment techniques and best practices for the UK job market.',
       features: [
         'Comprehensive recruitment strategies',
@@ -27,7 +27,7 @@ const TrainingPage = () => {
     {
       courseId: 'security-training',
       courseName: 'Security training',
-      price: 79,
+      price: 350,
       description: 'Professional security training to prepare for SIA licensing and security roles.',
       features: [
         'SIA license preparation',
@@ -173,3 +173,4 @@ const TrainingPage = () => {
 };
 
 export default TrainingPage;
+

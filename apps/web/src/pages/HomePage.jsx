@@ -80,6 +80,29 @@ const HomePage = () => {
             </div>
           </section>
 
+          <section className="py-12 bg-secondary">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="rounded-xl overflow-hidden shadow-md border">
+                  <img
+                    src="/images/homepage-photo-1.jpeg"
+                    alt="FAFAB team and service operations"
+                    className="w-full h-72 md:h-80 object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden shadow-md border">
+                  <img
+                    src="/images/homepage-photo-2.jpeg"
+                    alt="FAFAB training and workforce support"
+                    className="w-full h-72 md:h-80 object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section className="py-20 bg-secondary">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div initial={{

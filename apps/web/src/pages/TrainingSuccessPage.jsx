@@ -13,18 +13,22 @@ import Footer from '@/components/Footer.jsx';
 const TrainingSuccessPage = () => {
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get('session_id');
+  const paypalOrderId = searchParams.get('token');
+  const provider = searchParams.get('provider');
   const [payment, setPayment] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (sessionId) {
-      fetchPaymentDetails();
+    if (provider === 'paypal' && paypalOrderId) {
+      capturePayPalOrder();
+    } else if (sessionId) {
+      fetchStripePaymentDetails();
     } else {
       setLoading(false);
     }
-  }, [sessionId]);
+  }, [sessionId, provider, paypalOrderId]);
 
-  const fetchPaymentDetails = async () => {
+  const fetchStripePaymentDetails = async () => {
     try {
       const response = await apiServerClient.fetch(`/stripe/session/${sessionId}`);
       if (!response.ok) throw new Error('Failed to fetch payment details');
@@ -33,6 +37,22 @@ const TrainingSuccessPage = () => {
       setPayment(data);
     } catch (error) {
       console.error('Fetch payment error:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const capturePayPalOrder = async () => {
+    try {
+      const response = await apiServerClient.fetch(`/paypal/capture/${paypalOrderId}`, {
+        method: 'POST',
+      });
+      if (!response.ok) throw new Error('Failed to capture PayPal payment');
+
+      const data = await response.json();
+      setPayment(data);
+    } catch (error) {
+      console.error('PayPal capture error:', error);
     } finally {
       setLoading(false);
     }
