@@ -32,7 +32,7 @@ const CourseCard = ({ courseId, courseName, price, description, features, index 
           )}
         </CardContent>
         <CardFooter className="mt-auto">
-          <CheckoutButton courseName={courseName} price={price} label={buttonLabel} />
+          <CheckoutButton courseId={courseId} courseName={courseName} price={price} label={buttonLabel} />
         </CardFooter>
       </Card>
     </motion.div>

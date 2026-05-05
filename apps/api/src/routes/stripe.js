@@ -20,28 +20,32 @@ router.post('/create-checkout', async (req, res) => {
 
   logger.info(`Creating checkout session for ${productName} - ${unitAmountPence} minor units`);
 
-  const session = await stripe.checkout.sessions.create({
-    payment_method_types: ['card'],
-    line_items: [
-      {
-        price_data: {
-          currency: 'gbp',
-          product_data: {
-            name: productName,
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [
+        {
+          price_data: {
+            currency: 'gbp',
+            product_data: {
+              name: productName,
+            },
+            unit_amount: unitAmountPence,
           },
-          unit_amount: unitAmountPence,
+          quantity: 1,
         },
-        quantity: 1,
-      },
-    ],
-    mode: 'payment',
-    success_url: successUrl,
-    cancel_url: cancelUrl,
-  });
+      ],
+      mode: 'payment',
+      success_url: successUrl,
+      cancel_url: cancelUrl,
+    });
 
-  logger.info(`Checkout session created: ${session.id}`);
-
-  res.json({ url: session.url });
+    logger.info(`Checkout session created: ${session.id}`);
+    return res.json({ url: session.url });
+  } catch (error) {
+    logger.error('Stripe create checkout error:', error);
+    return res.status(500).json({ error: error?.message || 'Failed to create Stripe checkout' });
+  }
 });
 
 // Retrieve Checkout Session
